@@ -106,8 +106,8 @@ void VFD_WriteStr(int x, String str) {
   unsigned int l = str.length();   // how many chars were sent?
   char bla[l];                     // define working array of chars
   str.toCharArray(bla, l + 1);     // move string into array of chars
-  Serial.print("Sending to display: ");
-  Serial.println(bla);
+  //Serial.print("Sending to display: ");
+  //Serial.println(bla);
 
   digitalWrite(cs, LOW);
   delayMicroseconds(10);
