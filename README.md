@@ -16,6 +16,13 @@ this one was bought here: https://www.aliexpress.com/item/1005001498957894.html
 
 [![Futaba-VFD-16bit-ESP32](https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32/blob/main/pics/Futaba_VFD_16bit.jpg)](https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32)
 
+Connections display to ESP32:
+
+- din   = 23; // DA (MOSI)
+- clk   = 18; // CK (CLK)
+- cs    = 5;  // CS (SS)
+
+
 List of functions:
 
 VFD_init(); -- must be set in setup(), initializes the display
