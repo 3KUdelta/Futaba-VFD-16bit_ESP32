@@ -6,7 +6,7 @@ Author: Marc Staehli, initial upload April 2022
 Features:
 - Simple functions to control the display
 - Includes Umlaute (äöüÄÖÜ) and the degree sign (°)
-- vfd_controls.h include all functions in a file (works similar to a library)
+- vfd_controls.h include all functions (works similar to a library)
 - settings.h as a seperate file to input your individual settings
 
 [![Futaba-VFD-16bit-ESP32](https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32/blob/main/pics/VFD_16bit.png)](https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32)
