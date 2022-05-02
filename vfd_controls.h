@@ -134,13 +134,11 @@ void VFD_WriteStr(int x, String str) {
     for (int i = 0; i < l; i++) {
       write_byte(bla[i]);
     }
-  }
-  if (l <= 16) {
     for (int i = 0; i < 16 - x - l; i++) {
       write_byte(0x20);            // fill with blanks
     }
+    digitalWrite(cs, HIGH);
   }
-  digitalWrite(cs, HIGH);
 }
 void VFD_init() {
   /* Setting Digits ****************************************************/
