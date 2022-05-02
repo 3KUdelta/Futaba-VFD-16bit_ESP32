@@ -33,6 +33,6 @@ VFD_clearScreen(); -- clears the screen
 
 VFD_standby(bool); -- sets display in stand-by mode, value true or false
 
-VFD_WriteASCII(int, byte); -- write a char at a specific position (e.g. VFD_WriteASCII(2, 65); writes an 'A' at position 2)
+VFD_WriteASCII(int, byte); -- write a char at a specific position (e.g. VFD_WriteASCII(2, 65); writes an 'A' at position 3 - 0 is first position)
 
 VFD_WriteStr(int, String); -- write a string at a specific position. Long strings will automatically scroll from right to left.
