@@ -16,11 +16,3 @@
 String ver = "Version 1.2";
 unsigned int digits = 16;      // either 8 or 16 digits for the Futaba VFD
 unsigned int brightness = 50;  // initial brightness settings
-
-//****Do not change below this line *****************************************
-static const int spiClk = 100000;  // 0.1 MHz
-#define VSPI_MISO      MISO        // not relevant can be left unplugged
-#define VSPI_MOSI      MOSI        // ESP32 Pin 23
-#define VSPI_SCLK      SCK         // ESP32 Pin 18
-#define VSPI_SS        SS          // EsP32 Pin 5
-#define VSPI_SETTINGS  SPISettings(spiClk, LSBFIRST, SPI_MODE3)
