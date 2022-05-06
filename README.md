@@ -6,6 +6,7 @@ Type of display: **8-MD-06INKM**
 Author: Marc Staehli, initial upload April 2022
 
 Features:
+- Works with 8 digits and with 16 digits (change in settings.h)
 - Simple functions to control the display
 - Includes Umlaute (äöüÄÖÜ) and the degree sign (°)
 - vfd_controls.h includes all functions (works similar as a library)
