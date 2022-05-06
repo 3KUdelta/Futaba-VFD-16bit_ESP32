@@ -1,3 +1,4 @@
+#include <SPI.h>
 #include "settings.h"
 #include "vfd_controls.h"
 
@@ -8,21 +9,23 @@ void setup() {
   Serial.println("Starting VFD...");
   Serial.println();
 
-  pinMode(clk, OUTPUT);
-  pinMode(din, OUTPUT);
-  pinMode(cs, OUTPUT);
+  vspi = new SPIClass(VSPI);
+  vspi->begin(VSPI_SCLK, VSPI_MISO, VSPI_MOSI, VSPI_SS); //SCLK, MISO, MOSI, SS
 
-  VFD_init();            //initializing the 16bit display
+  pinMode(VSPI_SS, OUTPUT);  //VSPI SS
 
-  VFD_WriteStr(0, "Welcome!");
-  delay(2000);
+  VFD_init();                //initializing the display
 }
 
 void loop()
 {
-  VFD_WriteStr(16, "Writing a very long String to see scrolling.");
+  VFD_WriteStr(16, "Writing a long String to see scrolling.");
   delay(1000);
 
   VFD_clearScreen();
-  delay(3000);
+  for (int i = 0; i < 255; i++) {
+    VFD_WriteStr(0, "ASCii: " + String(i));
+    VFD_WriteASCII(11, i);
+    delay(800);
+  }
 }
