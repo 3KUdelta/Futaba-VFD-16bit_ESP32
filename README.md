@@ -5,6 +5,8 @@ Type of display: **8-MD-06INKM**
 
 Author: Marc Staehli, initial upload April 2022
 
+Fully refactored code that was originally delivered with the display using SPI.h library.
+
 Features:
 - Works with 8 digits and with 16 digits (change in settings.h)
 - Simple functions to control the display
