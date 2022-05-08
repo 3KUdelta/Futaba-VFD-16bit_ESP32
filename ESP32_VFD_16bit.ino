@@ -19,13 +19,13 @@ void setup() {
 
 void loop()
 {
-  VFD_WriteStr(16, "Writing a long String to see scrolling.");
+  VFD_WriteStr(8, "Writing a long String to see scrolling.");
   delay(1000);
 
   VFD_clearScreen();
   for (int i = 0; i < 255; i++) {
-    VFD_WriteStr(0, "ASCii: " + String(i));
-    VFD_WriteASCII(11, i);
+    VFD_WriteStr(0, String(i));   //show available ASCii chars
+    VFD_WriteASCII(4, i);
     delay(800);
   }
 }
