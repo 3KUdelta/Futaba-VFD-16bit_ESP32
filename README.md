@@ -27,6 +27,11 @@ Connections display to ESP32:
 - clk   = 18; // CK (CLK)
 - cs    = 5;  // CS (SS)
 
+the 8bit display needs additionally:
+
+- en    = solder blob to shoren with 5V
+- reset = must be set high (3.3V) to work - ground to be resetted
+
 
 List of functions:
 
