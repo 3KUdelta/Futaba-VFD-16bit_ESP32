@@ -155,7 +155,7 @@ void VFD_init() {
   }
   /* *******************************************************************/
   VFD_clearScreen();               //clear the screen
-  VFD_WriteStr(2, ver);            //write version number to screen
+  VFD_WriteStr(0, ver);            //write version number to screen
   delay(1000);
   VFD_clearScreen();               //clear the screen
 }
