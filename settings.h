@@ -13,6 +13,6 @@
   https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32
 
  ***************************************************************************/
-String ver = "Version 1.2";
+String ver = "V1.2 mst";
 unsigned int digits = 16;      // either 8 or 16 digits for the Futaba VFD
 unsigned int brightness = 50;  // initial brightness settings
