@@ -1,4 +1,3 @@
-#include <SPI.h>
 #include "settings.h"
 #include "vfd_controls.h"
 
