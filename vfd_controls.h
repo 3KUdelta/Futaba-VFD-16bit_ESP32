@@ -1,3 +1,5 @@
+#include <SPI.h>
+
 static const int spiClk = 100000;  // 0.1 MHz
 #define VSPI_MISO      MISO        // not relevant can be left unplugged
 #define VSPI_MOSI      MOSI        // ESP32 Pin 23
