@@ -1,4 +1,3 @@
-#include "settings.h"
 #include "vfd_controls.h"
 
 void setup() {
@@ -22,6 +21,8 @@ void setup() {
 void loop()
 {
   VFD_WriteStr(8, "Writing a long String to see scrolling.");
+  delay(1000);
+  VFD_WriteStr(0, "ÄäÖöÜü°");
   delay(1000);
 
   VFD_clearScreen();
