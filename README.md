@@ -8,11 +8,10 @@ Author: Marc Staehli, initial upload April 2022
 Fully refactored code of what was originally delivered with the display. Using SPI.h library for reliable control.
 
 Features:
-- Works with 8 digits and with 16 digits (change in settings.h)
+- Works with 8 digits and with 16 digits (must change in vfd_controls.h)
 - Simple functions to control the display
 - Includes Umlaute (äöüÄÖÜ) and the degree sign (°)
 - vfd_controls.h includes all functions (works similar as a library)
-- settings.h defined as a seperate file to input your individual settings
 
 [![Futaba-VFD-16bit-ESP32](https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32/blob/main/pics/VFD_16bit.png)](https://github.com/3KUdelta/Futaba-VFD-16bit_ESP32)
 
