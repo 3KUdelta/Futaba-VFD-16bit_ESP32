@@ -12,6 +12,9 @@ void setup() {
   vspi->begin(VSPI_SCLK, VSPI_MISO, VSPI_MOSI, VSPI_SS); //SCLK, MISO, MOSI, SS
 
   pinMode(VSPI_SS, OUTPUT);  //VSPI SS
+  
+  pinMode(RESET, OUTPUT);    //only needed for 8bit module
+  digitalWrite(RESET, HIGH); //only needed for 8bit module
 
   VFD_init();                //initializing the display
 }
