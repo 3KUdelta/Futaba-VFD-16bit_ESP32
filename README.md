@@ -5,10 +5,10 @@ Type of display: **8-MD-06INKM**
 
 Author: Marc Staehli, initial upload April 2022
 
-Fully refactored code of what was originally delivered with the display. Using SPI.h library for reliable control.
+Fully refactored code of what was originally delivered with the display. Using SPI.h library for reliable control of the display.
 
 Features:
-- Works with 8 digits and with 16 digits (must change in vfd_controls.h)
+- Works with 8 digits and with 16 digits (must be set in vfd_controls.h)
 - Simple functions to control the display
 - Includes Umlaute (äöüÄÖÜ) and the degree sign (°)
 - vfd_controls.h includes all functions (works similar as a library)
