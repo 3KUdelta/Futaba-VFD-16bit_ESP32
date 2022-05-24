@@ -132,7 +132,6 @@ void VFD_WriteStr(int x, String str) {
       vspi->transfer(bla[i]);         // fill first batch to end of visible chars
     }
     digitalWrite(VSPI_SS, HIGH);
-    delay(1000);                    // pause for reading
     for (int i = 0; i < l - DIGITS; i++) {
       digitalWrite(VSPI_SS, LOW);
       vspi->transfer(0x20);                // base register DCRAM 0H
