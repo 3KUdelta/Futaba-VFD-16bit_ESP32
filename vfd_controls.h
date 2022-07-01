@@ -18,7 +18,7 @@ void VFD_brightness(unsigned int level) {
   vspi->beginTransaction(VSPI_SETTINGS);
   digitalWrite(VSPI_SS, LOW);
   vspi->transfer(0xe4);            //first byte address for setting DIGITS
-  vspi->transfer(level);            //8 DIGITS equals value 7 (hex 0x07)
+  vspi->transfer(level);
   digitalWrite(VSPI_SS, HIGH);
   vspi->endTransaction();
 }
@@ -163,7 +163,7 @@ void VFD_init() {
   }
   if (DIGITS == 16) {
     vspi->transfer(0xe0);            //first byte address for setting DIGITS
-    vspi->transfer(0x0f);            //8 DIGITS equals value 7 (hex 0x07)
+    vspi->transfer(0x0f);            //16 DIGITS equals (0x0f)
   }
   digitalWrite(VSPI_SS, HIGH);
   vspi->endTransaction();
