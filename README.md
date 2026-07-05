@@ -213,6 +213,10 @@ Sequential test of every API call. Select display type at the top of the file wi
 
 `hh:mm:ss` clock seeded from compile time — no RTC needed. Only digits that actually change are animated with `flip()`, right-to-left. Works on both 8-digit and 16-digit displays. Select at top with `#define`.
 
+### SimpleFlipClock
+
+`hh:mm:ss` clock seeded from compile time — no RTC needed. Beginner friendly variant of the "ClockDemo".
+
 ### FontTest
 
 Cycles through all 62 printable characters (0–9, A–Z, a–z) using `flipIn` and `flipOut`. Select display at top with `#define`.
