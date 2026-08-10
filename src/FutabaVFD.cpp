@@ -21,7 +21,9 @@ static const uint8_t CMD_STANDBY     = 0xED;  // §2.8  ST=1 = standby
 //  Constructor / destructor
 // ---------------------------------------------------------------------------
 FutabaVFD::FutabaVFD(uint8_t digits, int8_t pinCS, int8_t pinReset, int spiBus)
-: _digits(digits == 16 ? 16 : 8),
+: : _digits(digits == 16 ? 16 :
+          digits == 8  ? 8  :
+          digits == 6  ? 6  : 8),
   _pinCS(pinCS), _pinReset(pinReset), _spiBusId(spiBus),
   _spi(nullptr),
   _spiSettings(FUTABA_VFD_DEFAULT_SPI_HZ, LSBFIRST, SPI_MODE3),
@@ -72,7 +74,10 @@ bool FutabaVFD::begin(int8_t sclk, int8_t miso, int8_t mosi,
   // §4-15 init flowchart: timing → dimming → DCRAM → lights on → run
   beginTxn(); selectLow();
   tx(CMD_SET_DIGITS);
-  tx(_digits == 16 ? 0x0F : 0x07);
+  tx(_digits == 16 ? 0x0F :
+   _digits == 8  ? 0x07 :
+   _digits == 6  ? 0x05 :
+                    0x00);
   selectHigh(); endTxn();
 
   setBrightness(50);
